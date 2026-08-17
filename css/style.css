@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Site-wide styles for clogas24.github.io
+   All pages should link to this single stylesheet instead of using
+   inline <style> blocks or per-page CSS.
+   ========================================================================== */
+
+:root {
+  --color-bg: #f7f7f9;
+  --color-surface: #ffffff;
+  --color-text: #1c1c1e;
+  --color-text-muted: #5a5a63;
+  --color-accent: #3457d5;
+  --color-accent-hover: #2a45ac;
+  --color-border: #e2e2e7;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --max-width: 960px;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Site header ---------- */
+
+.site-header {
+  padding: 56px 0 32px;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+}
+
+.site-header p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+/* ---------- Project grid ---------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 0 64px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.project-card h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+
+.project-card a.project-link {
+  font-weight: 600;
+}
+
+.project-card a.project-link:hover {
+  color: var(--color-accent-hover);
+}
+
+/* ---------- Project detail (PDF viewer) pages ---------- */
+
+.project-page {
+  padding: 24px 0;
+}
+
+.project-page .back-link {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.project-page embed {
+  width: 100%;
+  height: 85vh;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: 24px 0 48px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
