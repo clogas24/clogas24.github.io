@@ -92,9 +92,21 @@ a:hover {
   transform: translateY(-2px);
 }
 
-.project-card h2 {
+.project-card h2,
+.project-card h3 {
   margin: 0;
   font-size: 1.1rem;
+}
+
+/* ---------- Homepage project sections ---------- */
+
+.project-section {
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  margin: 0 0 16px;
+  font-size: 1.3rem;
 }
 
 .project-card p {
