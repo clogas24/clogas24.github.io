@@ -25,8 +25,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
+  padding-top: 68px; /* offsets the fixed .site-nav so it doesn't cover page content */
   font-family: var(--font-body);
   background: var(--color-bg);
   color: var(--color-text);
@@ -59,6 +70,13 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .site-brand {
@@ -96,13 +114,43 @@ a:hover {
   padding: 48px 0 56px;
 }
 
+.hero-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
 .hero-photo {
   width: 160px;
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: var(--shadow);
-  flex-shrink: 0;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.hero-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.hero-social-link:hover {
+  box-shadow: var(--shadow-hover);
+  color: var(--color-accent);
+  text-decoration: none;
 }
 
 .hero-greeting {
@@ -161,11 +209,36 @@ a:hover {
   box-shadow: var(--shadow-hover);
 }
 
+/* ---------- Hero stats ---------- */
+
+.hero-stats {
+  display: flex;
+  gap: 56px;
+  margin: 0 0 28px;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat-num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
 /* ---------- Page sections ---------- */
 
 .page-section {
   padding: 40px 0;
   border-top: 1px solid var(--color-border);
+  scroll-margin-top: 68px;
 }
 
 /* ---------- Project grid ---------- */
@@ -407,6 +480,98 @@ a:hover {
   box-shadow: var(--shadow-hover);
   text-decoration: none;
   color: var(--color-accent-hover);
+}
+
+/* ---------- Experience timeline ---------- */
+
+.timeline {
+  position: relative;
+  border-left: 2px solid var(--color-border);
+  padding-left: 24px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 2px solid var(--color-bg);
+}
+
+.timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.timeline-org {
+  margin: 2px 0 10px;
+  font-weight: 600;
+  color: var(--color-accent);
+  font-size: 0.92rem;
+}
+
+.timeline-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.timeline-list li {
+  margin-bottom: 6px;
+}
+
+.timeline-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Scroll reveal animations ----------
+   Self-contained: to remove, delete this block, the class="reveal"
+   attributes in index.html, and the reveal IIFE in js/main.js. */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ---------- Footer ---------- */
