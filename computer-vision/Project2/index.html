@@ -10,7 +10,47 @@
 <body>
     <div class="container project-page">
         <a class="back-link" href="../../index.html">&larr; Back to all projects</a>
-        <embed src="Project 2 Report - Carson Logas.pdf" type="application/pdf" />
+
+        <h1>Homography-Based Image Rectification &amp; AR Poster Swap</h1>
+        <p>
+            CSCI 581 (Computer Vision) project using homographies to rectify a tilted planar
+            surface into a front-facing view, then reusing the same correspondence points to
+            warp a virtual poster onto a wall for an augmented-reality effect, and finally
+            comparing two general-purpose image warping methods.
+        </p>
+
+        <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">NumPy</span>
+        </div>
+
+        <h2>Approach</h2>
+        <p>
+            A homography is a projective transformation mapping one 2D plane to another. When a
+            flat surface is photographed at an angle, its edges converge due to perspective; by
+            computing the homography between the tilted surface and a rectangular target, that
+            projection can be mathematically undone to simulate a head-on view &mdash; the same
+            technique used by document scanners, AR apps, and panorama stitchers.
+        </p>
+        <p>
+            The same correspondence points were then reused for an AR effect: a new homography
+            mapped a virtual poster's corners onto the paper region on a wall, and
+            <code>cv2.warpPerspective()</code> plus a blending mask attached it at the correct
+            angle in the scene. The hardest part was picking accurate corner points, since any
+            error there threw off the whole alignment.
+        </p>
+        <p>
+            Finally, triangular-mesh warping and thin-plate-spline (TPS) warping were compared
+            on a grid image. Triangular mesh warping splits the image into triangles and warps
+            each independently &mdash; fast, with good local control, but prone to visible seams
+            between triangles. TPS bends the whole image smoothly and continuously, giving more
+            natural results on curved shapes at the cost of more computation.
+        </p>
+
+        <h2>Full Report</h2>
+        <p>The complete write-up is embedded below, or <a href="Project 2 Report - Carson Logas.pdf">open the PDF directly</a>.</p>
+        <embed src="Project 2 Report - Carson Logas.pdf#toolbar=0&navpanes=0" type="application/pdf" />
     </div>
 </body>
 </html>
