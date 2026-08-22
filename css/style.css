@@ -72,15 +72,15 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 16px;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 12px;
+  right: 12px;
   z-index: 100;
   background: var(--color-bg-secondary);
   border-bottom: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 
 .site-brand {
@@ -285,15 +285,38 @@ main > .page-section:nth-of-type(even) {
 }
 
 .project-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 6px;
   padding: 20px;
+  padding-right: 52px;
+  padding-bottom: 52px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.project-github-link {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.project-github-link:hover {
+  box-shadow: var(--shadow-hover);
+  color: var(--color-accent);
 }
 
 .project-card:hover {
