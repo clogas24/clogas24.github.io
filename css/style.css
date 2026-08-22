@@ -51,19 +51,121 @@ a:hover {
 /* ---------- Site header ---------- */
 
 .site-header {
-  padding: 56px 0 32px;
-  text-align: center;
+  padding-bottom: 8px;
 }
 
-.site-header h1 {
-  margin: 0 0 8px;
-  font-size: 2.2rem;
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
-.site-header p {
+.site-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.site-brand:hover {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px 0 56px;
+}
+
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+.hero-greeting {
   margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.hero-role {
+  margin: 6px 0 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.hero-desc {
+  max-width: 560px;
+  margin: 0 0 28px;
   color: var(--color-text-muted);
   font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-secondary:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* ---------- Page sections ---------- */
+
+.page-section {
+  padding: 40px 0;
+  border-top: 1px solid var(--color-border);
 }
 
 /* ---------- Project grid ---------- */
@@ -72,7 +174,6 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
-  padding: 0 0 64px;
 }
 
 .project-card {
@@ -100,13 +201,27 @@ a:hover {
 
 /* ---------- Homepage project sections ---------- */
 
-.project-section {
+.section-heading {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.skills-group {
   margin-bottom: 20px;
 }
 
-.section-heading {
-  margin: 0 0 16px;
-  font-size: 1.3rem;
+.skills-group:last-child {
+  margin-bottom: 0;
+}
+
+.skills-group h3 {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
 }
 
 .project-card p {

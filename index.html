@@ -9,32 +9,78 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
-            <h1>Carson Logas</h1>
-            <p>Project reports and work, collected here as they're uploaded.</p>
+        <nav class="container site-nav">
+            <a href="#" class="site-brand">Carson Logas</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/clogas24" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </nav>
+
+        <div class="container hero">
+            <div class="hero-text">
+                <p class="hero-greeting">Hi, I'm Carson.</p>
+                <p class="hero-role">Software Engineer &amp; CS Graduate Student</p>
+                <p class="hero-desc">I build full-stack web platforms, computer vision systems, and low-level computing projects &mdash; and I'm pursuing an M.S. in Computer Science at the University of Mississippi.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View My Projects</a>
+                    <a class="btn btn-secondary" href="https://github.com/clogas24" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <img class="hero-photo" src="css/headshot/hsAI.png" alt="Carson Logas">
         </div>
     </header>
 
-    <main class="container">
-        <div class="project-grid">
-            <div class="project-card">
-                <h2>K-Anonymity vs. Differential Privacy</h2>
-                <p>Data Anonymization final project comparing two data-anonymization techniques head-to-head across three public datasets.</p>
-                <a class="project-link" href="k-anonymity-vs-differential-privacy/index.html">View project &rarr;</a>
-            </div>
-            <div class="project-card">
-                <h2>Real-Time File Sync Service</h2>
-                <p>Computer Networks final project: a multi-client file synchronization server built from raw TCP sockets.</p>
-                <a class="project-link" href="realtime-file-sync/index.html">View project &rarr;</a>
-            </div>
-            <div class="project-card">
-                <h2>C Compiler Front End</h2>
-                <p>Compiler Construction project: a Flex/Bison lexer and parser that type-checks a C subset and emits ILOC-style IR in basic blocks.</p>
-                <a class="project-link" href="c-compiler/index.html">View project &rarr;</a>
-            </div>
-        </div>
+    <main>
+        <section id="about" class="container page-section">
+            <h2 class="section-heading">About</h2>
+            <p>Full-stack Software Engineer and Computer Science graduate student (M.S., University of Mississippi, expected December 2026) with production experience delivering enterprise analytics platforms, REST APIs, and security-hardened applications using Vue.js, .NET/C#, React, and Node.js. My coursework spans applied AI/ML &mdash; computer vision and privacy-preserving machine learning &mdash; alongside systems-level fundamentals in compilers and network programming. I like shipping features end-to-end, from database schema to production UI, with the tests and docs that keep them reliable.</p>
+        </section>
 
-        <section class="project-section">
+        <section id="projects" class="container page-section">
+            <h2 class="section-heading">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h2>K-Anonymity vs. Differential Privacy</h2>
+                    <p>Data Anonymization final project comparing two data-anonymization techniques head-to-head across three public datasets.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">scikit-learn</span>
+                    </div>
+                    <a class="project-link" href="k-anonymity-vs-differential-privacy/index.html">View project &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <h2>Real-Time File Sync Service</h2>
+                    <p>Computer Networks final project: a multi-client file synchronization server built from raw TCP sockets.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TCP Sockets</span>
+                    </div>
+                    <a class="project-link" href="realtime-file-sync/index.html">View project &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <h2>C Compiler Front End</h2>
+                    <p>Compiler Construction project: a Flex/Bison lexer and parser that type-checks a C subset and emits ILOC-style IR in basic blocks.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">Flex / Bison</span>
+                    </div>
+                    <a class="project-link" href="c-compiler/index.html">View project &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <h2>Computer Vision Projects</h2>
+                    <p>A series of projects covering classifiers, camera geometry, homographies, object detection, and diffusion models.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                    <a class="project-link" href="#computer-vision">View project &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="computer-vision" class="container page-section">
             <h2 class="section-heading">Computer Vision Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
@@ -62,6 +108,95 @@
                     <p>Forward and reverse diffusion &mdash; denoising a noised image step-by-step with a UNet.</p>
                     <a class="project-link" href="computer-vision/Project4/index.html">View project &rarr;</a>
                 </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container page-section">
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills-group">
+                <h3>Languages</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">C</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <h3>Frameworks &amp; Libraries</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Angular</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">.NET Framework</span>
+                    <span class="tech-tag">ASP.NET Core</span>
+                    <span class="tech-tag">ASP.NET MVC</span>
+                    <span class="tech-tag">ASP.NET Web API</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Vite</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <h3>Data &amp; Machine Learning</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">scikit-learn</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">NLTK</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">TF-IDF</span>
+                    <span class="tech-tag">SMOTE</span>
+                    <span class="tech-tag">GridSearchCV</span>
+                    <span class="tech-tag">Diffprivlib</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <h3>Databases</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">SQL Server (SSMS)</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Firebase</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <h3>Testing &amp; Systems</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">xUnit</span>
+                    <span class="tech-tag">Flex / Bison</span>
+                    <span class="tech-tag">Socket Programming</span>
+                    <span class="tech-tag">Multithreading</span>
+                    <span class="tech-tag">RESTful API Design</span>
+                </div>
+            </div>
+            <div class="skills-group">
+                <h3>Cloud &amp; DevOps</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">AWS (EC2, S3)</span>
+                    <span class="tech-tag">Azure / Azure DevOps</span>
+                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">Git / GitHub</span>
+                    <span class="tech-tag">Agile / Scrum</span>
+                    <span class="tech-tag">Linux</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container page-section">
+            <h2 class="section-heading">Contact</h2>
+            <div class="resource-links">
+                <a href="https://github.com/clogas24" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/carson-logas/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:carsonlogas@outlook.com">Email</a>
             </div>
         </section>
     </main>
