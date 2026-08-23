@@ -4,54 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1 - Carson Logas</title>
-    <link rel="icon" type="image/png" href="../../css/headshot/carsonlogastransparent.png">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/png" href="/css/headshot/carsonlogastransparent.png">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="container project-page">
-        <a class="back-link" href="../../index.html">&larr; Back to all projects</a>
-
-        <h1>Camera Geometry, Histogram Equalization &amp; Edge Detection</h1>
-        <p>
-            CSCI 581 (Computer Vision) project covering three classic image-processing
-            techniques on real photos: perspective vs. orthographic projection, histogram
-            equalization for contrast enhancement, and difference-of-Gaussians (DoG) edge
-            detection.
-        </p>
-
-        <div class="tech-tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">OpenCV</span>
-            <span class="tech-tag">NumPy</span>
-            <span class="tech-tag">Matplotlib</span>
-        </div>
-
-        <h2>Approach</h2>
-        <p>
-            Rendering the same hallway scene under perspective vs. orthographic projection
-            showed the core difference directly: under perspective, parallel lines converge
-            toward a vanishing point, giving a strong sense of depth, while orthographic
-            projection keeps them parallel, flattening the scene.
-        </p>
-        <p>
-            Histogram equalization was applied to several faded, low-contrast, and underexposed
-            photos. In each case, redistributing pixel intensities across the full brightness
-            range made details easier to see &mdash; at the cost of introducing grainy noise in
-            the darkest regions, since equalization amplifies whatever separation exists there,
-            noise included.
-        </p>
-        <p>
-            Two DoG-based edge detectors were then compared: a naive approach that smooths the
-            image before differencing, and a direct approach that differences first. The naive
-            method consistently produced cleaner, more readable edges, especially on noisy test
-            images, while the direct method picked up more background noise along with the true
-            edges &mdash; both found the same structures, but smoothing first paid off on
-            image quality.
-        </p>
-
-        <h2>Full Report</h2>
-        <p>The complete write-up is embedded below, or <a href="Project 1 Report - Carson Logas.pdf" target="_blank" rel="noopener">open the PDF directly</a>.</p>
-        <embed src="Project 1 Report - Carson Logas.pdf#toolbar=0&navpanes=0" type="application/pdf" />
-    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-cv-project1.jsx"></script>
 </body>
 </html>

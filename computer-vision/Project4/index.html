@@ -4,51 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 4 - Carson Logas</title>
-    <link rel="icon" type="image/png" href="../../css/headshot/carsonlogastransparent.png">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/png" href="/css/headshot/carsonlogastransparent.png">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="container project-page">
-        <a class="back-link" href="../../index.html">&larr; Back to all projects</a>
-
-        <h1>Forward &amp; Reverse Diffusion Denoising with a UNet</h1>
-        <p>
-            CSCI 581 (Computer Vision) project implementing the forward noising process behind
-            diffusion models and a UNet-based reverse process to denoise images step by step,
-            then extending it to sampling from pure noise, classifier-free guidance, and
-            SDEdit-style image editing.
-        </p>
-
-        <div class="tech-tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">UNet</span>
-        </div>
-
-        <h2>Approach</h2>
-        <p>
-            The forward process progressively corrupts an image with noise; tested at timesteps
-            250, 500, and 750, the source image went from recognizable-but-noisy to almost
-            entirely noise. Trying to reverse that with a plain Gaussian blur failed outright
-            &mdash; it just smooths the noise rather than reconstructing anything, confirming
-            that only a learned model can undo diffusion. A single UNet denoising step worked
-            fine at low noise levels but couldn't rebuild detail once the image was heavily
-            corrupted, while the full iterative reverse loop &mdash; denoising gradually across
-            many steps &mdash; produced noticeably more structured, coherent results.
-        </p>
-        <p>
-            Running the reverse process from pure random noise produced abstract but
-            structured images, confirming the sampling loop itself works. Classifier-free
-            guidance (steering the model harder toward its text-conditioned prediction, tested
-            at a guidance strength of 7) sharpened those samples and pulled them closer to the
-            prompt. SDEdit &mdash; adding noise to a real image and then only partially
-            denoising it &mdash; gave direct control over edit strength: low noise left the
-            image nearly untouched, while high noise produced dramatic transformations.
-        </p>
-
-        <h2>Full Report</h2>
-        <p>The complete write-up is embedded below, or <a href="Project 4 Report - Carson Logas.pdf" target="_blank" rel="noopener">open the PDF directly</a>.</p>
-        <embed src="Project 4 Report - Carson Logas.pdf#toolbar=0&navpanes=0" type="application/pdf" />
-    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-cv-project4.jsx"></script>
 </body>
 </html>
