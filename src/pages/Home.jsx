@@ -28,6 +28,14 @@ const projects = [
   },
 ];
 
+const mfmProjects = [
+  {
+    title: "Project 0",
+    desc: "MLPs on Fashion-MNIST (capacity, activations, vanishing gradients) plus a GRU encoder-decoder with hand-built Bahdanau attention for English-French translation.",
+    href: "/Multimodal-Foundation-Models/Project0/index.html",
+  },
+];
+
 const cvProjects = [
   {
     title: "Project 0",
@@ -213,6 +221,23 @@ export default function Home() {
                     aria-label="View on GitHub"
                   >
                     <GithubIcon width={18} height={18} />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal id="multimodal-foundation-models" className="page-section">
+          <div className="container">
+            <h2 className="section-heading">Multimodal Foundation Models Projects</h2>
+            <div className="project-grid">
+              {mfmProjects.map((p) => (
+                <div className="project-card" key={p.title}>
+                  <h3>{p.title}</h3>
+                  <p>{p.desc}</p>
+                  <a className="project-link" href={p.href}>
+                    View project &rarr;
                   </a>
                 </div>
               ))}
