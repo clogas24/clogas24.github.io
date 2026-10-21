@@ -34,6 +34,11 @@ const mfmProjects = [
     desc: "MLPs on Fashion-MNIST (capacity, activations, vanishing gradients) plus a GRU encoder-decoder with hand-built Bahdanau attention for English-French translation.",
     href: "/Multimodal-Foundation-Models/Project0/index.html",
   },
+  {
+    title: "Project 1",
+    desc: "Probing pretrained vision models: ViT-B/16 patches and predictions, hand-built CLIP zero-shot classification, and a controlled study of whether CLIP can tell \"on\" from \"under\".",
+    href: "/Multimodal-Foundation-Models/Project1/index.html",
+  },
 ];
 
 const cvProjects = [

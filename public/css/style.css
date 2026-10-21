@@ -451,6 +451,10 @@ main > .page-section:nth-of-type(even) {
   overflow: hidden;
 }
 
+.image-gallery figure.wide {
+  grid-column: 1 / -1;
+}
+
 .image-gallery img {
   display: block;
   width: 100%;
