@@ -20,6 +20,7 @@ export default defineConfig({
         cvProject4: page("computer-vision", "Project4"),
         mfmProject0: page("Multimodal-Foundation-Models", "Project0"),
         mfmProject1: page("Multimodal-Foundation-Models", "Project1"),
+        mfmProject2: page("Multimodal-Foundation-Models", "Project2"),
       },
     },
   },
