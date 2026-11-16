@@ -39,6 +39,11 @@ const mfmProjects = [
     desc: "Probing pretrained vision models: ViT-B/16 patches and predictions, hand-built CLIP zero-shot classification, and a controlled study of whether CLIP can tell \"on\" from \"under\".",
     href: "/Multimodal-Foundation-Models/Project1/index.html",
   },
+  {
+    title: "Project 2",
+    desc: "Flow matching from scratch on 2D point clouds: a learned Gaussian-to-ring flow, an animated transport into my initials \"CL\", and a seeded, compute-matched test of whether reflow straightens the paths.",
+    href: "/Multimodal-Foundation-Models/Project2/index.html",
+  },
 ];
 
 const cvProjects = [
